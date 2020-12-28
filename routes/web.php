@@ -22,3 +22,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', App\Http\Controllers\DashboardController::class);
+
+Route::group(['middlewire' => 'auth'], function(){
+    Route::resource('accounts', App\Http\Controllers\AccountController::class);
+    Route::resource('deposits', \App\Http\Controllers\DepositController::class);
+    Route::resource('withdraws', \App\Http\Controllers\WithdrawController::class);
+    Route::resource('exchanges', \App\Http\Controllers\ExchangeController::class);
+});

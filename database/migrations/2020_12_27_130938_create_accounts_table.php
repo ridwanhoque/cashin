@@ -15,6 +15,17 @@ class CreateAccountsTable extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('created_by');
+            $table->foreign('created_by')->references('id')->on('users');
+            $table->unsignedBigInteger('updated_by');
+            $table->foreign('updated_by')->references('id')->on('users');
+            $table->unsignedBigInteger('payment_method_id');
+            $table->foreign('payment_method_id', 'a_pmid')->references('id')->on('payment_methods');
+            $table->string('email');
+            $table->string('account_id');
+            $table->unique(['payment_method_id', 'account_id']);
+            $table->text('description');
+            $table->decimal('balance', 20, 2);
             $table->timestamps();
         });
     }

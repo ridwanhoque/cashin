@@ -16,51 +16,27 @@
 
      <li>
        <a href="icons.html">
-         <i class="zmdi zmdi-invert-colors"></i> <span>UI Icons</span>
+         <i class="zmdi zmdi-invert-colors"></i> <span>Deposit</span>
        </a>
      </li>
 
      <li>
        <a href="forms.html">
-         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Forms</span>
+         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Withdraw</span>
        </a>
      </li>
 
      <li>
        <a href="tables.html">
-         <i class="zmdi zmdi-grid"></i> <span>Tables</span>
-       </a>
-     </li>
-
-     <li>
-       <a href="calendar.html">
-         <i class="zmdi zmdi-calendar-check"></i> <span>Calendar</span>
-         <small class="badge float-right badge-light">New</small>
+         <i class="zmdi zmdi-grid"></i> <span>Account</span>
        </a>
      </li>
 
      <li>
        <a href="profile.html">
-         <i class="zmdi zmdi-face"></i> <span>Profile</span>
+         <i class="zmdi zmdi-face"></i> <span>Exchange</span>
        </a>
      </li>
-
-     <li>
-       <a href="login.html" target="_blank">
-         <i class="zmdi zmdi-lock"></i> <span>Login</span>
-       </a>
-     </li>
-
-      <li>
-       <a href="register.html" target="_blank">
-         <i class="zmdi zmdi-account-circle"></i> <span>Registration</span>
-       </a>
-     </li>
-
-     <li class="sidebar-header">LABELS</li>
-     <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>
-     <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Warning</span></a></li>
-     <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li>
 
    </ul>
   
