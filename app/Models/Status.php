@@ -8,11 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Status extends Model
 {
     use HasFactory;
-
-    public function __construct(){
-        
-    }
-
+    
     public static function boot(){
         parent::boot();
 
