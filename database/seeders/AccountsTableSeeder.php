@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Account;
 use Illuminate\Database\Seeder;
+use App\Models\User;
 
 class AccountsTableSeeder extends Seeder
 {
@@ -14,6 +15,7 @@ class AccountsTableSeeder extends Seeder
      */
     public function run()
     {
+        $firstUser = User::first();
 
         $accounts = [
             [1, 'ridwanhoque2@gmail.com', '01674204306', 0],
@@ -29,7 +31,9 @@ class AccountsTableSeeder extends Seeder
                 'email' => $account[1],
                 'account_id' => $account[2],
                 'description' => '',
-                'balance' => $account[3]
+                'balance' => $account[3],
+                'created_by' => $firstUser->id,
+                'updated_by' => $firstUser->id
             ]);
         }
     }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Status;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class StatusesTableSeeder extends Seeder
@@ -14,6 +15,9 @@ class StatusesTableSeeder extends Seeder
      */
     public function run()
     {
+
+        $firstUser = User::first();
+
         $statuses = [
             'Awaiting Payment',
             'Timeout',
@@ -25,7 +29,9 @@ class StatusesTableSeeder extends Seeder
 
         foreach($statuses as $status){
             Status::create([
-                    'name' => $status
+                    'name' => $status,
+                    'created_by' => $firstUser->id,
+                    'updated_by' => $firstUser->id
                 ]);        
         }
     }

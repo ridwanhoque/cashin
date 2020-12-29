@@ -21,7 +21,8 @@ class CreatePaymentMethodsTable extends Migration
             $table->foreign('updated_by')->references('id')->on('users');
             $table->string('name');
             $table->string('currency', 3);
-            $table->integer('rate');
+            $table->integer('buy_rate');
+            $table->integer('sell_rate');
             $table->timestamps();
         });
     }
