@@ -12,7 +12,7 @@ class Status extends Model
     public static function boot(){
         parent::boot();
 
-        if(!app()->runningInConsole){
+        if(!app()->runningInConsole()){
             static::creating(function($model){
                 $model->fill([
                     'created_by' => auth()->user()->id,
