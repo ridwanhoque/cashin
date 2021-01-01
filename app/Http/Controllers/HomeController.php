@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Exchange;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $exchanges = Exchange::orderByDesc('id')->paginate();
+        return view('admin.dashboard', compact('exchanges'));
     }
 }

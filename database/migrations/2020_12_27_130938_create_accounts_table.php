@@ -26,6 +26,8 @@ class CreateAccountsTable extends Migration
             $table->unique(['payment_method_id', 'account_id']);
             $table->text('description');
             $table->decimal('balance', 20, 2);
+            $table->unsignedBigInteger('account_holder');
+            $table->foreign('account_holder', 'a_ah')->references('id')->on('users');
             $table->timestamps();
         });
     }

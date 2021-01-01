@@ -32,6 +32,7 @@ class AccountsTableSeeder extends Seeder
                 'account_id' => $account[2],
                 'description' => '',
                 'balance' => $account[3],
+                'account_holder' => $firstUser->id,
                 'created_by' => $firstUser->id,
                 'updated_by' => $firstUser->id
             ]);

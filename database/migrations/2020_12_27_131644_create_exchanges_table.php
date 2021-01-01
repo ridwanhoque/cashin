@@ -19,6 +19,14 @@ class CreateExchangesTable extends Migration
             $table->foreign('created_by')->references('id')->on('users');
             $table->unsignedBigInteger('updated_by');
             $table->foreign('updated_by')->references('id')->on('users');
+            $table->unsignedBigInteger('exchange_from');
+            $table->foreign('exchange_from', 'e_ef')->references('id')->on('accounts');
+            $table->unsignedBigInteger('exchange_to');
+            $table->foreign('exchange_to', 'e_et')->references('id')->on('accounts');
+            $table->decimal('amount', 20, 2);
+            $table->date('date');
+            $table->unsignedBigInteger('status_id');
+            $table->foreign('status_id', 'e_sid')->references('id')->on('statuses');
             $table->timestamps();
         });
     }
