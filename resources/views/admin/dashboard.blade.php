@@ -35,11 +35,11 @@
                   <tbody>
                 @forelse ($exchanges as $exchange)
                 <tr>
-                    <td>{{ $exchange->exchange_from }}</td>
-                    <td>{{ $exchange->exchange_to }}</td>
+                    <td>{{ $exchange->payment_method_from->name }}</td>
+                    <td>{{ $exchange->payment_method_to->name }}</td>
                     <td>{{ $exchange->amount }}</td>
                     <td>{{ $exchange->date }}</td>
-                    <td>{{ $exchange->status }}</td>
+                    <td>{{ $exchange->status->name }}</td>
                 </tr>
                      
                 @empty
