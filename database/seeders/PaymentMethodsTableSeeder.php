@@ -18,12 +18,12 @@ class PaymentMethodsTableSeeder extends Seeder
         $firstUser = User::first();
 
         $methods = [
-            ['Bkash', 'bdt', 1, 100],
-            ['Rocket', 'bdt', 1, 100],
-            ['Nagad', 'bdt', 1, 100],
-            ['Skrill', 'usd', 80, 100],
-            ['Webmoney', 'usd', 80, 100],
-            ['Perfect Money', 'usd', 80, 100]
+            ['Bkash', 'BDT', 1, 100],
+            ['Rocket', 'BDT', 1, 100],
+            ['Nagad', 'BDT', 1, 100],
+            ['Skrill', 'USD', 80, 100],
+            ['Webmoney', 'USD', 80, 100],
+            ['Perfect Money', 'USD', 80, 100]
         ];
 
         foreach($methods as $method){
