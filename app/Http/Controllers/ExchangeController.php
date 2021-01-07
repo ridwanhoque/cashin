@@ -14,7 +14,8 @@ class ExchangeController extends Controller
      */
     public function index()
     {
-        //
+        $exchanges = Exchange::orderByDesc('id')->paginate();
+        return view('admin.exchanges.index', compact('exchanges'));
     }
 
     /**
